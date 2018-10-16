@@ -55,9 +55,9 @@ if(isset($_SESSION['user'])){
         <?php $datos =  $valor['ID']."|".$valor['n_exp']."|".$valor['tipo_exp']."|".$valor['proce_exp']."|".$valor['tipo_proce']."|".$valor['dependencia']."|".$valor['f_presentacion']."|".$valor['f_ingreso']."|".$valor['f_entrega']."|".$valor['asistente']."|".$valor['cargo']."|".$valor['f_ultima']."|".$valor['estado_proce']."|".$valor['detalle_estado']."|".$valor['fojas']."|".$valor['motivo'];
         ?>
 
-        <td><button class ="btn btn-warning" data-toggle="modal" data-target="#Actualizar" id ="update" name="<?php echo $valor['ID']?>" onclick = "agregarDatos('<?php echo $datos?>')">Editar</td></button>
+        <td><button class ="btn btn-warning" data-toggle="modal" data-target="#Actualizar" name="<?php echo $valor['ID']?>" onclick = "agregarDatos('<?php echo $datos?>')">Editar</td></button>
 	    	<td><button class ="btn btn-danger"  id ="eliminar" name="" onclick = "ConfirmarArchivar(<?php echo $valor['ID']?>)">Archivar</td></button>
-        <td><button class ="btn btn-info" data-toggle="modal" data-target="#ChangeUser" id ="change" name="<?php echo $valor['ID']?>" onclick = "agregarDatos('<?php echo $datos?>')">Delegar</td></button>
+        <td><button class ="btn btn-info" data-toggle="modal" data-target="#ChangeUser" id="change" name="<?php echo $valor['ID']?>">Delegar</td></button>
      
           </tr>
           <?php endforeach; ?>

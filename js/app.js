@@ -171,6 +171,39 @@ $('#update').click(function(){
   actualizarDatos();
 });
 
+function delegar(datos){
+
+
+
+  id=$('#change').attr('name');
+  console.log(name);
+
+
+  usuario = $('input:radio[name=cmethod]:checked').val();
+  console.log(usuario);
+
+  cadena =  "id=" + id +
+            "&asistente=" + usuario;
+
+  $.ajax({
+    url:'../backend/delegarUser.php',
+    type: 'GET',
+    data: cadena,
+    success: function(dat){
+      
+     console.log('DELEGADO');
+   //  $('#insertar').html("<div class='alert alert-success'><strong>Bien!</strong></div>");
+      mostrar();
+      alertify.success("Registro Delegado");
+        
+    }
+  });
+  
+}
+
+$('#delegar').click(function(){
+  delegar();
+});
 
 
 

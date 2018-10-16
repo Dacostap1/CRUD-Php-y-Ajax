@@ -276,26 +276,26 @@ include_once '../backend/conexion.php';
         </button>
       </div>
       <div class="modal-body">
+      <?php
+        //leer
+        $sql_leer = 'SELECT * FROM usuarios';
+        $gsent = $pdo->prepare($sql_leer);
+        $gsent->execute();
 
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" id="radio1" name="cmethod" value="phone" checked>
-                <label class="form-check-label" for="radio1">Phone</label>
-            </div>
+        $resultado = $gsent -> fetchAll();
 
+        foreach($resultado as $valor):
+        ?>
             <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" id="radio2" name="cmethod" value="mail">
-                <label class="form-check-label" for="radio2">Email</label>
+                <input class="form-check-input" type="radio" id="radio1" name="cmethod" value="<?php echo utf8_encode($valor['nombre'])?>">
+                <label class="form-check-label" for="radio1"><?php echo utf8_encode($valor['nombre'])?></label>
             </div>
+        <?php endforeach ?>
 
-            <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" id="radio3" name="cmethod" value="post">
-                <label class="form-check-label" for="radio3">Post</label>
-            </div>
-     
       </div>
       <div class="modal-footer">
         <button type="button"  class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" id="change" class="btn btn-primary" data-dismiss="modal" >Delegar</button>
+        <button type="button" id="delegar" class="btn btn-primary" data-dismiss="modal" >Delegar</button>
       </div>
     </div>
   </div>
