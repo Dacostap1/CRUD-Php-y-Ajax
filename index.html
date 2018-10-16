@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="css/css.css" rel="stylesheet">
+</head>
+  <body>
+    <div class="container text-center">
+        <form  method="POST" action="backend/login.php" class="form-signin">
+            <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFEOTYzny0218c3yRnUQWpNhudL-h45Tq-qlByfHoYnZmu1WYZ" alt="" width="150" height="120">
+            <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+            <label for="inputUser" class="sr-only">Usuario</label>
+            <input type="text" name ="usuario" class="form-control" placeholder="Usuario" required autofocus>
+            <label for="inputPassword" class="sr-only mt-1">Contraseña</label>
+            <input type="password" name="pass" class="form-control mt-1" placeholder="Contraseña" required>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
+            
+            <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+            <hr class="bg-info">
+            <p class="mt-5 mb-3 text-muted">¿No tienes una cuenta?,</p>
+            
+            <a href="registrouser.html" >Crea una</a>
+
+            
+          </form>
+          
+    </div><!-- /container -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.js" ></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
