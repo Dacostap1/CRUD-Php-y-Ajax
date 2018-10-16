@@ -29,7 +29,7 @@ if(isset($_SESSION['user'])){
   <table id="tabla" class="table table-hover table-responsive text-center table-bordered">
     <thead class="thead-light">
           <tr>
-          <th>N° de Expediente</th><th>Tipo de Expediente</th><th>Procedencia de Expediente</th><th>Tipo</th><th>Dependencia</th><th>Fecha de Presentación</th><th>Fecha de Ingreso</th><th>Fecha de Entrega</th><th>Asistente Encargado</th><th>Cargo</th><th>Fecha de última resolución</th><th>Estado del proceso</th><th>Detalle del estado</th><th>Fojas</th><th>Motivo</th><th>Acción</th><th>Acción</th>
+          <th>N° de Expediente</th><th>Tipo de Expediente</th><th>Procedencia de Expediente</th><th>Tipo</th><th>Dependencia</th><th>Fecha de Presentación</th><th>Fecha de Ingreso</th><th>Fecha de Entrega</th><th>Asistente Encargado</th><th>Cargo</th><th>Fecha de última resolución</th><th>Estado del proceso</th><th>Detalle del estado</th><th>Fojas</th><th>Motivo</th><th>Acción</th><th>Acción</th><th>Acción</th>
           </tr>
         </thead>
         <tbody>
@@ -57,6 +57,7 @@ if(isset($_SESSION['user'])){
 
         <td><button class ="btn btn-warning" data-toggle="modal" data-target="#Actualizar" id ="update" name="<?php echo $valor['ID']?>" onclick = "agregarDatos('<?php echo $datos?>')">Editar</td></button>
 	    	<td><button class ="btn btn-danger"  id ="eliminar" name="" onclick = "ConfirmarArchivar(<?php echo $valor['ID']?>)">Archivar</td></button>
+        <td><button class ="btn btn-info" data-toggle="modal" data-target="#ChangeUser" id ="change" name="<?php echo $valor['ID']?>" onclick = "agregarDatos('<?php echo $datos?>')">Delegar</td></button>
      
           </tr>
           <?php endforeach; ?>

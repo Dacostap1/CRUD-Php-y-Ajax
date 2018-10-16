@@ -30,6 +30,7 @@ include_once '../backend/conexion.php';
     <link rel="stylesheet" href="../lib/alertifyjs/css/alertify.css">
     <link rel="stylesheet" href="../lib/alertifyjs/css/themes/default.css">
     <link rel="stylesheet" href="../css/select2.min.css">
+    <link rel="stylesheet" href="../lib/MDB-4.5.12/css/mdb.min.css">
   </head>
   <body id = "body">
       <div class="container-fluid">
@@ -263,6 +264,42 @@ include_once '../backend/conexion.php';
     </div>
   </div>
 </div>
+
+<!-- Modal Delegar-->
+<div class="modal fade" id="ChangeUser" role="dialog" aria-labelledby="ChangeUserLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ChangeUserLabel">Delegar Registro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" id="radio1" name="cmethod" value="phone" checked>
+                <label class="form-check-label" for="radio1">Phone</label>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" id="radio2" name="cmethod" value="mail">
+                <label class="form-check-label" for="radio2">Email</label>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" id="radio3" name="cmethod" value="post">
+                <label class="form-check-label" for="radio3">Post</label>
+            </div>
+     
+      </div>
+      <div class="modal-footer">
+        <button type="button"  class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" id="change" class="btn btn-primary" data-dismiss="modal" >Delegar</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="../js/jquery-3.3.1.js"></script>
@@ -281,6 +318,7 @@ include_once '../backend/conexion.php';
     <script src="../js/select2.min.js"></script>
     <script src="../js/app.js"></script>
     <script src="../lib/alertifyjs/alertify.js"></script>
+    <script src="../lib/MDB-4.5.12/js/mdb.min.js" ></script>
 
 <script>
 $('#dependencia_a').select2();
