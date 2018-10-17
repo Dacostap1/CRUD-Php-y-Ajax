@@ -30,6 +30,7 @@ include_once '../backend/conexion.php';
     <link rel="stylesheet" href="../css/select2.min.css">
     <link rel="stylesheet" href="../lib/alertifyjs/css/alertify.css">
     <link rel="stylesheet" href="../lib/alertifyjs/css/themes/default.css">
+    <link rel="stylesheet" href="../lib/MDB-4.5.12/css/mdb.min.css">
     
 
 </head>
@@ -39,43 +40,14 @@ include_once '../backend/conexion.php';
             <div class="col-md-7">
                 <h1 class="display-4">Registro de Inventarios</h1>
                 <hr class="bg-info">  
-                
+                <p class="text-danger small pt-0 mt-0">*Todos los campos son obligatorios</p>
+
                 <div class="alert alert-success d-none" id="mensajeExito">Mensaje enviado con éxito</div>
                 <div class="alert alert-danger d-none" id="mensajeError"></div>
 
                 <form id="formulario" class="mt-4" novalidate>
 
-                    <div class="row justify-content-around mt-5">
-                    
-                    <div class="col-4">
-                    <div class="row form-group">
-                    <div class="input-group mb-3">
-                    <div class="input-group-prepend">   
-                        <div class="input-group-text">
-                        <input type="checkbox" aria-label="Checkbox for following text input"> Fecha IPAD
-                        </div>
-                    </div>
-                        <input type="text" class="form-control date" aria-label="Text input with checkbox">
-                    </div>
-                    </div>
-                    </div>
-
-                    <div class="col-5">
-                        <div class="row form-group">
-                        <div class="input-group mb-3">
-                        <div class="input-group-prepend">   
-                        <div class="input-group-text">
-                        <input type="checkbox" aria-label="Checkbox for following text input"> Fecha Procedimiento
-                        </div>
-                        </div>
-                            <input type="text" class="form-control date" aria-label="Text input with checkbox">
-                        </div>
-                    </div>
-                    </div>
-
-                    </div>
-
-
+                
                     <div class="row form-group">
                         <label for="numero_exp" class="col-form-label col-md-4">N° de expediente:</label>
                         <div class="col-md-8">
@@ -269,9 +241,11 @@ include_once '../backend/conexion.php';
                     </div>
                     
                 
-
-                    <button type="submit" class="btn btn-info">Enviar</button>
-                    
+                    <div class="text-center mt-4">
+                        
+                        <button type="submit" class="btn btn-info mr-4">Enviar</button>
+                        <a href="paginainicio.php" class="btn btn-danger ml-4">Cancelar</button></a>
+                    </div>
                     
                 </form>
             </div>
@@ -285,6 +259,7 @@ include_once '../backend/conexion.php';
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="../js/jquery-ui.js"></script>                    
     <script src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../lib/MDB-4.5.12/js/mdb.min.js" ></script>
     <script src="../js/select2.min.js"></script>
     <script src="../lib/alertifyjs/alertify.js"></script>
     <script src="../js/app.js"></script>

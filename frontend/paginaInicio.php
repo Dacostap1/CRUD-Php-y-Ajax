@@ -26,6 +26,7 @@ else{
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/MDB-4.5.12/css/mdb.min.css">
 </head>
   <body>
       <div class="container">
@@ -63,6 +64,7 @@ else{
     <script src="../js/jquery-3.3.1.js"></script>
     <script src="../bootstrap/popper.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/MDB-4.5.12/js/mdb.min.js" ></script>
     <script>
     window.location.hash="no-back-button";
     window.location.hash="Again-No-back-button";//esta linea es necesaria para chrome

@@ -24,6 +24,7 @@ include_once '../backend/conexion.php';
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/MDB-4.5.12/css/mdb.min.css">
     <link rel="stylesheet" href="../lib/DataTables/datatables.min.css">
     <link rel="stylesheet" href="../lib/DataTables/DataTables-1.10.18/buttons.dataTables.min.css">
     <link rel="stylesheet" href="../lib/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
@@ -48,6 +49,7 @@ include_once '../backend/conexion.php';
     <script src="../js/jquery-3.3.1.js"></script>
     <script src="../bootstrap/popper.min.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../lib/MDB-4.5.12/js/mdb.min.js" ></script>
     <script type="text/javascript" src="../lib/DataTables/datatables.min.js"></script> 
     <script src="../lib/DataTables/DataTables-1.10.18/dataTables.buttons.min.js"></script>
     <script src="../lib/DataTables/DataTables-1.10.18/buttons.flash.min.js"></script>
