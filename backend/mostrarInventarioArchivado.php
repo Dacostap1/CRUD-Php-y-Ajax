@@ -56,8 +56,8 @@ if(isset($_SESSION['user'])){
         <?php $datos =  $valor['ID']."|".$valor['n_exp']."|".$valor['tipo_exp']."|".$valor['proce_exp']."|".$valor['tipo_proce']."|".$valor['dependencia']."|".$valor['f_presentacion']."|".$valor['f_ingreso']."|".$valor['f_entrega']."|".$valor['asistente']."|".$valor['cargo']."|".$valor['f_ultima']."|".$valor['estado_proce']."|".$valor['detalle_estado']."|".$valor['fojas']."|".$valor['motivo'];
         ?>
 
-        <td><button class ="btn btn-warning" id ="update" name="<?php echo $valor['ID']?>" onclick = "ConfirmarDesarchivar(<?php echo $valor['ID']?>)">Desarchivar</td></button>
-	    	<td><button class ="btn btn-danger"  id ="eliminar" name="" onclick = "ConfirmarEliminar(<?php echo $valor['ID']?>)">Eliminar</td></button>
+        <td><button class ="btn btn-warning btn-md" id ="update" name="<?php echo $valor['ID']?>" onclick = "ConfirmarDesarchivar(<?php echo $valor['ID']?>)">Desarchivar</td></button>
+	    	<td><button class ="btn btn-danger btn-md"  id ="eliminar" name="" onclick = "ConfirmarEliminar(<?php echo $valor['ID']?>)">Eliminar</td></button>
      
           </tr>
           <?php endforeach; ?>

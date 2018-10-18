@@ -4,9 +4,11 @@ session_start();
 
 if(isset($_SESSION['admin'])){
     echo 'Bienvenido '.$_SESSION['admin'];
+    $asistente = $_SESSION['admin'];
     echo '<br><a href="../backend/cerrar.php">CerrarSesion</a>';
 }elseif (isset($_SESSION['user'])) {
     echo 'Bienvenido '.$_SESSION['user'];
+    $asistente = $_SESSION['user'];
     echo '<br><a href="../backend/cerrar.php">CerrarSesion</a>';
 }
 else{
@@ -158,7 +160,7 @@ include_once '../backend/conexion.php';
                     <div class="row form-group">
                         <label for="asistente" class="col-form-label col-md-4">Asistente Encargado:</label>
                         <div class="col-md-8">
-                            <input type="text" name="asistente" value="" id="asistente" class="form-control" required>
+                            <input type="text" name="asistente" readonly="" value="<?php echo $asistente ?>" id="asistente" class="form-control bg-white" required>
                         </div>
                     </div>
 

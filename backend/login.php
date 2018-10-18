@@ -12,7 +12,7 @@ include_once 'conexion.php';
 
     echo'<pre>';
 
-    $sql = 'SELECT * FROM usuarios WHERE nombre = ?';
+    $sql = 'SELECT * FROM usuarios WHERE user = ?';
     $sentencia = $pdo -> prepare($sql);
     $sentencia -> execute(array($user));
     $resultado = $sentencia->fetch();//boolean
@@ -32,10 +32,10 @@ include_once 'conexion.php';
     if(password_verify($clave, $resultado['clave'])){
         echo 'las contraseñas son iguales</br>';
         if( strtolower($user) == 'admin'){
-        $_SESSION['admin'] = $user;
+        $_SESSION['admin'] = $resultado['nombre'];
        
         }else{
-            $_SESSION['user'] = $user;
+            $_SESSION['user'] = $resultado['nombre'];
         }
        
         header('Location: ../frontend/paginaInicio.php ');
