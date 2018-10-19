@@ -26,6 +26,30 @@ $(document).ready(function(){
 })
 
 
+function login(){
+
+    usuario= $('#usuario').val();
+    clave= $('#pass').val();
+
+    cadena =  "usuario=" + usuario +
+              "&clave=" + clave;
+              
+    console.log(cadena);
+    $.ajax({
+      url:'../backend/login.php',
+      type: 'POST',
+      data: cadena,
+      success: function(){
+       console.log(cadena);
+     //  $('#insertar').html("<div class='alert alert-success'><strong>Bien!</strong></div>");
+  
+      
+          
+      }
+    })
+  }
+
+
 
 //mostrar
 //document.getElementById("body").onload = function() {mostrar()};
