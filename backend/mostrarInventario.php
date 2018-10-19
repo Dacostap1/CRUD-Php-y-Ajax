@@ -29,13 +29,13 @@ if(isset($_SESSION['user'])){
   <table id="tabla" class="table table-hover table-responsive text-center table-bordered">
     <thead class="thead-light">
           <tr>
-          <th>N° de Expediente</th><th>Tipo de Expediente</th><th>Procedencia de Expediente</th><th>Tipo</th><th>Dependencia</th><th>Fecha de Presentación</th><th>Fecha de Ingreso</th><th>Fecha de Entrega</th><th>Asistente Encargado</th><th>Cargo</th><th>Fecha de última resolución</th><th>Estado del proceso</th><th>Detalle del estado</th><th>Fojas</th><th>Motivo</th><th>Acción</th><th>Acción</th><th>Acción</th>
+          <th>N°</th> <th>N° de Expediente</th><th>Tipo de Expediente</th><th>Procedencia de Expediente</th><th>Tipo</th><th>Dependencia</th><th>Fecha de Presentación</th><th>Fecha de Ingreso</th><th>Fecha de Entrega</th><th>Asistente Encargado</th><th>Cargo</th><th>Fecha de última resolución</th><th>Estado del proceso</th><th>Detalle del estado</th><th>Fojas</th><th>Motivo</th><th>Acción</th><th>Acción</th><th>Acción</th>
           </tr>
         </thead>
         <tbody>
         <?php foreach ($resultado as $valor): ?>
           <tr>
-           
+          <td> <?php echo $numero = $numero+1; ?></td>
         <td > <?php echo $valor['n_exp'] ?> </td>
 		    <td> <?php echo $valor['tipo_exp']?> </td>	
 	    	<td> <?php echo $valor['proce_exp'] ?> </td>	
@@ -67,7 +67,7 @@ if(isset($_SESSION['user'])){
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+   
 
 
   </body>

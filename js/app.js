@@ -54,7 +54,7 @@ function mostrar(){
               filename: 'Inventario - Consolidado ',
               title: "Consolidado",
               exportOptions: {
-                columns: [ 0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                columns: [ 0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
               }
             }
           ]
@@ -88,7 +88,7 @@ function mostrarArchivados(){
               filename: 'Inventario - Consolidado ',
               title: "Consolidado",
               exportOptions: {
-                columns: [ 0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+                columns: [ 0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
               }
             }
           ]  
