@@ -42,9 +42,23 @@ function mostrar(){
          $('#tabla').DataTable( {
           dom: 'Bfrtip',
           buttons: [
-            'copy', 'csv', 'excel', 'print'
+            {
+              extend: 'excelHtml5',
+              text: 'Guardar como Excel',
+              customize: function ( xlsx ){
+                var sheet = xlsx.xl.worksheets['sheet1.xml'];
+ 
+                // jQuery selector to add a border
+                $('c[r*=2]', sheet).attr( 's', '32' );
+            },
+              filename: 'Inventario - Consolidado ',
+              title: "Consolidado",
+              exportOptions: {
+                columns: [ 0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+              }
+            }
           ]
-      } );
+          } );
          console.log("mostrando");
 		}
     })//ajax
@@ -59,14 +73,29 @@ function mostrarArchivados(){
 		success: function(dat){
       var show = $("#conta");
          show.html(dat); 
-         $('#tablaArchivada').DataTable( {
+         var table = $('#tablaArchivada').DataTable( {
           dom: 'Bfrtip',
           buttons: [
-            'copy', 'csv', 'excel', 'print'
-          ]
-      } );
+            {
+              extend: 'excelHtml5',
+              text: 'Guardar como Excel',
+              customize: function ( xlsx ){
+                var sheet = xlsx.xl.worksheets['sheet1.xml'];
+ 
+                // jQuery selector to add a border
+                $('c[r*=2]', sheet).attr( 's', '32' );
+            },
+              filename: 'Inventario - Consolidado ',
+              title: "Consolidado",
+              exportOptions: {
+                columns: [ 0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+              }
+            }
+          ]  
+        });
+       
          console.log("mostrandoArchivados");
-		}
+		  }
     })//ajax
 }
 
